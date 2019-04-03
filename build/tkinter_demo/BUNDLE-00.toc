@@ -1,0 +1,3 @@
+([('tkinter_demo',
+   '/Users/liudianjun/Desktop/QT/dist/tkinter_demo',
+   'EXECUTABLE')],)
