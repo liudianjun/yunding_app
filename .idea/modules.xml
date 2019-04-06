@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../QT/.idea/云顶_QT.iml" filepath="$PROJECT_DIR$/../QT/.idea/云顶_QT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/yunding_app.iml" filepath="$PROJECT_DIR$/.idea/yunding_app.iml" />
     </modules>
   </component>
 </project>
