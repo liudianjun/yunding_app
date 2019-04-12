@@ -69,6 +69,7 @@ class out_put(object):
             else:
                 count = row[numb_index]
             print('count->', count)
+            # 这里只统计 金额为零的商品 小于零的商品也添加到正常的分类里
             if amount == 0:
                 # print(row[amount_index])
                 # print(data_zero.keys())
@@ -101,6 +102,7 @@ class out_put(object):
             sheet1.write(0, i, row0[i])
             f.save(self.out_path + '统计' + self.file_name)
         flag = 1
+        # 写入金额零的数据
         for data in zero_data:
             # print(data, normal_data[data])
 
@@ -116,6 +118,7 @@ class out_put(object):
             sheet2.write(0, i, row0[i])
             f.save(self.out_path + '统计' + self.file_name)
         flag1 = 1
+        # 写入金额不为零的数据
         for data in normal_data:
             # print(data, normal_data[data])
 
@@ -139,14 +142,20 @@ class out_put(object):
 
 file_path = None
 file_name = None
-file_name = None
+# file_name = None
+# 定义app的界面
 def make_app():
+    # 获取一个窗口对象
     tk = Tk()
+    # 标签
     Label(tk, text='云顶财务软件').pack()
+    # 显示框
     Listbox(tk, name='l_file', bg='#F4F2F4').pack(fill=BOTH, expand=True)
+    # 添加按键
     Button(tk, text='选择文件', command=select_file).pack()
     Button(tk, text='输出文件', command=gen_excel).pack()
-    tk.geometry('300x300')
+    # 定义窗口的大小
+    tk.geometry('500x300')
     return tk
 
 def select_file():
@@ -166,6 +175,10 @@ def select_file():
     print('文件名：', file_name)
 
 def gen_excel():
+    '''
+    选择输出的路径
+    :return:
+    '''
     out_paht = askdirectory() + '/'
     l_box = app.children['l_file']
     l_box.insert(END, "输出路径：" + out_paht)
