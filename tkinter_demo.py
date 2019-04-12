@@ -69,7 +69,7 @@ class out_put(object):
             else:
                 count = row[numb_index]
             print('count->', count)
-            if amount <= 0:
+            if amount == 0:
                 # print(row[amount_index])
                 # print(data_zero.keys())
                 if row[goods_index] not in zero_data.keys():
