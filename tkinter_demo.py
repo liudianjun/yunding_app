@@ -112,7 +112,7 @@ class out_put(object):
                     sheet1.write(flag, i, data)
                 else:
                     sheet1.write(flag, i, zero_data[data][i - 1])
-            f.save(self.out_path + 'sale_count.xls')
+            # f.save(self.out_path + 'sale_count.xls')
             flag += 1
         for i in range(0, len(row0)):
             sheet2.write(0, i, row0[i])
